@@ -1,4 +1,4 @@
-# [CPP_DSA_ ](http://127.0.0.1:5500/index.html)
+# [CPP_DSA_ ](https://tusharjoshi55.github.io/DSA_/)
 A complete code log of my journey mastering C++ fundamentals and transitioning into advanced Data Structures &amp; Algorithms (DSA).
 
 
