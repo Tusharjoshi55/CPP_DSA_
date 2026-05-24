@@ -10,8 +10,6 @@ SCREAMING_SNAKE_CASE - used for constraint and macros.
 
 
 ## Google C++ Style Guide
-<<<<<<< HEAD
+
 Uses **PascalCase** for classes, camelCase for regular variables, snake_case for a few specific things, and trailing underscores for member variables (variable_).
-=======
-Uses **PascalCase** for classes, camelCase for regular variables, snake_case for a few specific things, and trailing underscores for member variables (variable_).
->>>>>>> d3ac3b53d31a9e73c0be22685bd6d7c7ea28f1c5
+
