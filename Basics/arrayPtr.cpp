@@ -2,7 +2,8 @@
 
 using namespace std;
 
-
+// compiler convert function argument int pointer implecitly.
+//void test(int* arr[]) - this will done by  compiler
 void test(int arr[]){
  cout<< "\nArray size : "<< sizeof(arr);
  cout<< "\naddress of array : "<< arr;
