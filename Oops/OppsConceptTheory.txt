@@ -49,7 +49,7 @@ Protected :- variable(data) and method are accessible to class and it's drived c
 
 3. Encapsulation
 It is wrapping up of data(veriables) and method(member function) in a single unit called Class.
-
+It is used in data hiding using access Modifiers. use private
 for eg.
 
 //normal function
@@ -61,9 +61,9 @@ int main(){
     return 0;
 }
 
-//Encapsulation
+//Encapsulation :- wrapping data and method inside a class
 class Print{
-    Public:
+    private:
     void helloWorld(){
         cout<<"Hello, World !";
     } 
@@ -71,6 +71,68 @@ class Print{
 
 int main(){
     Print obj;
+    //now we can not use this function because it is hidden inside a wrapper or it's abstracted
     obj.helloWorld();
     return 0;
 }
+
+
+//Constructor
+
+Special function invoked automatically at the time of object creation. Used for initilization
+-Same name as class name
+-Constructor dosen't have return type
+-Only calls once(automatically), at object creation.
+-Memory allocation is happen when constructor is called
+-if we not defined a constructor cpp automatically create one for class
+
+types of constructor
+
+a. Non-parameterized constructor
+eg. class ClassName{
+    void ClassName();
+}
+
+b. parameterized constructor
+
+eg.
+class ClassName{
+    void ClassName(int var){
+        //body
+    }
+};
+int main(){
+    ClassName obj(value);
+}
+
+
+*important
+Constructor overloading(Polymorphism) - means same constructor name but differnt parameter.
+eg.
+class ClassName{
+    void ClassName(){
+        //body
+    }
+    void ClassName(int var){
+        //body
+    }
+};
+int main(){
+    ClassName obj1; // first constructor called
+    ClassName obj2(value); //Second Constructor called
+
+}
+
+
+*important
+
+this keyword- this is a Special pointer in cpp that points to the current object.
+this->prop is same *(this).prop
+
+c. Copy Constructor
+
+class ClassName{
+
+};
+
+int main(){}
