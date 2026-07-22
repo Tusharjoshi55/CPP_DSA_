@@ -1,0 +1,76 @@
+
+Four Piller of Oops
+object and classes
+Encapsulation
+Abstraction
+Inheritance
+
+
+
+1.Object and Classes
+
+classes are the blueprint of real world entity.
+syntex : 
+
+class ClassName{
+    //variables
+    int var;
+
+    //member functions
+    void doSomething(){
+        //body of member function
+    }
+};
+
+object are the entity in the real world.
+ syntex:
+ int main(){
+
+    //object creation
+    ClassName objectName;
+
+    //access a member funtion and veriable of class through dot notation
+
+    //accessing a variables
+    objectName.variableName;
+
+    //accessing a mamber function
+    objectName.functionName;
+ }
+
+
+2.Access Modifiers
+
+Private :- variables and method(functions) are accessible inside a class. It is default value of class when not mention.
+Public :- variable and method are accessible to everyone in the programm.
+Protected :- variable(data) and method are accessible to class and it's drived class. //inheritance topic.
+            // we can use getter and setter function to modifes the Protected Modifiers.
+
+
+3. Encapsulation
+It is wrapping up of data(veriables) and method(member function) in a single unit called Class.
+
+for eg.
+
+//normal function
+void helloWorld(){
+    cout<<"Hello, World !";
+}
+int main(){
+    helloWorld();
+    return 0;
+}
+
+//Encapsulation
+class Print{
+    Public:
+    void helloWorld(){
+        cout<<"Hello, World !";
+    } 
+}
+
+int main(){
+    Print obj;
+    obj.helloWorld();
+    return 0;
+}
