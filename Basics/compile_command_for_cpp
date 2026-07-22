@@ -1,0 +1,9 @@
+
+
+g++ filename.cpp -o program.exe
+
+
+for compliation for particular version of cpp you can use command -
+
+g++ filename.cpp -std=c++17 -o program.exe - for version 17 cpp
+g++ filename.cpp -std=c++20 -o program.exe - for version 20 cpp
