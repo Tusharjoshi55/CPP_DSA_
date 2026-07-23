@@ -1,9 +1,11 @@
 #include<iostream>
 using namespace std;
+
+
 class HelloWorld{
     public:
     HelloWorld(){
-        cout<<"Hello, World";
+        cout<<(1^2) ;
     }
 };
 

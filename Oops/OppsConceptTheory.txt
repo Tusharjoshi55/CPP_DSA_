@@ -43,7 +43,7 @@ object are the entity in the real world.
 
 Private :- variables and method(functions) are accessible inside a class. It is default value of class when not mention.
 Public :- variable and method are accessible to everyone in the programm.
-Protected :- variable(data) and method are accessible to class and it's drived class. //inheritance topic.
+Protected :- variable(data) and method are accessible to class and it's drived class.  //inheritance topic.
             // we can use getter and setter function to modifes the Protected Modifiers.
 
 
@@ -162,4 +162,18 @@ Inheritance - when we create a drive class(child class) that have properties of 
  };
  class Drived : access_modifier Base{
     //body of Drived class
+    void functin(var1) : void BaseFunction(var2, var3){   // calling the parent class method
+        this->var1 = var1;
+    }
  };
+
+ ** Order of Execution - Base Class constructor then Drived class constructor. when we create the object of drived class //with programm
+
+
+ ** Important Acces Modifiers
+                    Drived Class            Drived Class         Drived Class
+ Base Class         private mdoe            Protected mode       public mode  
+
+ Private            not inherited           not inherited        not inherited
+ Protected          private                 Protected            Protected
+ Public             private                 Protected            public
