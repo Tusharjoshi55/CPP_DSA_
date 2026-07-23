@@ -129,10 +129,27 @@ int main(){
 this keyword- this is a Special pointer in cpp that points to the current object.
 this->prop is same *(this).prop
 
-c. Copy Constructor
+c. Copy Constructor :- Special constructor(defalut) used to copy  properties of one object into another.
+
+when copy constructor are created they are copy of the main objet to other object.
+So, there is the type of Copy.
+
+**important
+a. Shallow Copy :-A shallow copy of an object copies all the member values from one object to another. //defaul is shallow copy
+b. Deep Copy :- A deep copy, on the other hand, not only copy the member values but also make copy of any dynamically allocated memory that the member pointes to,
 
 class ClassName{
-
+        void ClassName(int var){
+        //body
+    }
 };
 
-int main(){}
+int main(){
+    ClassName obj1(var);
+    ClassName obj2(obj1); // we pass obj1 as a parameter for obj2 this is work of copy constructor
+}
+
+
+Destructor - it is automatically calles when object complete its cycle and perform all its task. 
+It mainly delete static variable and memeber function not dynemic variable and function.
+
