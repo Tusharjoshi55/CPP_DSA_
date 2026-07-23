@@ -153,3 +153,13 @@ int main(){
 Destructor - it is automatically calles when object complete its cycle and perform all its task. 
 It mainly delete static variable and memeber function not dynemic variable and function.
 
+
+
+Inheritance - when we create a drive class(child class) that have properties of base class(parent class).
+ syntex : 
+ class Base{
+    //body of Base class
+ };
+ class Drived : access_modifier Base{
+    //body of Drived class
+ };
