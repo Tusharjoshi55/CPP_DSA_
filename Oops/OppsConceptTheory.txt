@@ -9,171 +9,244 @@ Inheritance
 
 1.Object and Classes
 
-classes are the blueprint of real world entity.
-syntex : 
+        classes are the blueprint of real world entity.
+        syntex : 
 
-class ClassName{
-    //variables
-    int var;
+        class ClassName{
+            //variables
+            int var;
 
-    //member functions
-    void doSomething(){
-        //body of member function
-    }
-};
+            //member functions
+            void doSomething(){
+                //body of member function
+            }
+        };
 
-object are the entity in the real world.
- syntex:
- int main(){
+        object are the entity in the real world.
+         syntex:
+         int main(){
+        
+            //object creation
+            ClassName objectName;
 
-    //object creation
-    ClassName objectName;
+            //access a member funtion and veriable of class through dot notation
 
-    //access a member funtion and veriable of class through dot notation
+            //accessing a variables
+            objectName.variableName;
 
-    //accessing a variables
-    objectName.variableName;
-
-    //accessing a mamber function
-    objectName.functionName;
- }
+            //accessing a mamber function
+            objectName.functionName;
+         }
 
 
 2.Access Modifiers
 
-Private :- variables and method(functions) are accessible inside a class. It is default value of class when not mention.
-Public :- variable and method are accessible to everyone in the programm.
-Protected :- variable(data) and method are accessible to class and it's drived class.  //inheritance topic.
-            // we can use getter and setter function to modifes the Protected Modifiers.
+        Private :- variables and method(functions) are accessible inside a class. It is default value of class when not mention.
+        Public :- variable and method are accessible to everyone in the programm.
+        Protected :- variable(data) and method are accessible to class and it's drived class.  //inheritance topic.
+                    // we can use getter and setter function to modifes the Protected Modifiers.
+
+         ** Important Acces Modifiers used in inheritance.
+                            Drived Class            Drived Class         Drived Class
+         Base Class         private mdoe            Protected mode       public mode  
+        
+         Private            not inherited           not inherited        not inherited
+         Protected          private                 Protected            Protected
+         Public             private                 Protected            public
 
 
 3. Encapsulation
-It is wrapping up of data(veriables) and method(member function) in a single unit called Class.
-It is used in data hiding using access Modifiers. use private
-for eg.
+        It is wrapping up of data(veriables) and method(member function) in a single unit called Class.
+        It is used in data hiding using access Modifiers. use private
+        for eg.
 
-//normal function
-void helloWorld(){
-    cout<<"Hello, World !";
-}
-int main(){
-    helloWorld();
-    return 0;
-}
+        //normal function
+        void helloWorld(){
+            cout<<"Hello, World !";
+        }
+        int main(){
+            helloWorld();
+            return 0;
+        }
 
-//Encapsulation :- wrapping data and method inside a class
-class Print{
-    private:
-    void helloWorld(){
-        cout<<"Hello, World !";
-    } 
-}
+        //Encapsulation :- wrapping data and method inside a class
+        class Print{
+            private:
+            void helloWorld(){
+                cout<<"Hello, World !";
+            } 
+        }
 
-int main(){
-    Print obj;
-    //now we can not use this function because it is hidden inside a wrapper or it's abstracted
-    obj.helloWorld();
-    return 0;
-}
-
-
-//Constructor
-
-Special function invoked automatically at the time of object creation. Used for initilization
--Same name as class name
--Constructor dosen't have return type
--Only calls once(automatically), at object creation.
--Memory allocation is happen when constructor is called
--if we not defined a constructor cpp automatically create one for class
-
-types of constructor
-
-a. Non-parameterized constructor
-eg. class ClassName{
-    void ClassName();
-}
-
-b. parameterized constructor
-
-eg.
-class ClassName{
-    void ClassName(int var){
-        //body
-    }
-};
-int main(){
-    ClassName obj(value);
-}
+        int main(){
+            Print obj;
+            //now we can not use this function because it is hidden inside a wrapper or it's abstracted
+            obj.helloWorld();
+            return 0;
+        }
 
 
-*important
-Constructor overloading(Polymorphism) - means same constructor name but differnt parameter.
-eg.
-class ClassName{
-    void ClassName(){
-        //body
-    }
-    void ClassName(int var){
-        //body
-    }
-};
-int main(){
-    ClassName obj1; // first constructor called
-    ClassName obj2(value); //Second Constructor called
+4.Constructor
 
-}
+        Special function invoked automatically at the time of object creation. Used for initilization
+        -Same name as class name
+        -Constructor dosen't have return type
+        -Only calls once(automatically), at object creation.
+        -Memory allocation is happen when constructor is called
+        -if we not defined a constructor cpp automatically create one for class
 
+            types of constructor
 
-*important
-
-this keyword- this is a Special pointer in cpp that points to the current object.
-this->prop is same *(this).prop
-
-c. Copy Constructor :- Special constructor(defalut) used to copy  properties of one object into another.
-
-when copy constructor are created they are copy of the main objet to other object.
-So, there is the type of Copy.
-
-**important
-a. Shallow Copy :-A shallow copy of an object copies all the member values from one object to another. //defaul is shallow copy
-b. Deep Copy :- A deep copy, on the other hand, not only copy the member values but also make copy of any dynamically allocated memory that the member pointes to,
-
-class ClassName{
-        void ClassName(int var){
-        //body
-    }
-};
-
-int main(){
-    ClassName obj1(var);
-    ClassName obj2(obj1); // we pass obj1 as a parameter for obj2 this is work of copy constructor
-}
+                    a. Non-parameterized constructor
+                    eg. class ClassName{
+                        void ClassName();
+                    }
 
 
-Destructor - it is automatically calles when object complete its cycle and perform all its task. 
-It mainly delete static variable and memeber function not dynemic variable and function.
+                    b. parameterized constructor
+
+                    eg.
+                    class ClassName{
+                        void ClassName(int var){
+                            //body
+                        }
+                    };
+                    int main(){
+                        ClassName obj(value);
+                    }
+
+
+                *important
+                Constructor overloading(Polymorphism) - means same constructor name but differnt parameter.
+                eg.
+                class ClassName{
+                    void ClassName(){
+                        //body
+                    }
+                    void ClassName(int var){
+                        //body
+                    }
+                };
+                int main(){
+                    ClassName obj1; // first constructor called
+                    ClassName obj2(value); //Second Constructor called
+
+                }
+
+
+                *important
+                this keyword- this is a Special pointer in cpp that points to the current object.
+                this->prop is same *(this).prop
 
 
 
-Inheritance - when we create a drive class(child class) that have properties of base class(parent class).
- syntex : 
- class Base{
-    //body of Base class
- };
- class Drived : access_modifier Base{
-    //body of Drived class
-    void functin(var1) : void BaseFunction(var2, var3){   // calling the parent class method
-        this->var1 = var1;
-    }
- };
+                c. Copy Constructor :- Special constructor(defalut) used to copy  properties of one object into another.
 
- ** Order of Execution - Base Class constructor then Drived class constructor. when we create the object of drived class //with programm
+                when copy constructor are created they are copy of the main objet to other object.
+                So, there is the type of Copy.
+
+                **important
+                a. Shallow Copy :-A shallow copy of an object copies all the member values from one object to another. //defaul is shallow copy
+                b. Deep Copy :- A deep copy, on the other hand, not only copy the member values but also make copy of any dynamically allocated memory that the member pointes to,
+
+                class ClassName{
+                        void ClassName(int var){
+                        //body
+                    }
+                };
+
+                int main(){
+                    ClassName obj1(var);
+                    ClassName obj2(obj1); // we pass obj1 as a parameter for obj2 this is work of copy constructor
+                }
 
 
- ** Important Acces Modifiers
-                    Drived Class            Drived Class         Drived Class
- Base Class         private mdoe            Protected mode       public mode  
+5.Destructor - it is automatically calles when object complete its cycle and perform all its task. 
+        It mainly delete static variable and memeber function not dynemic variable and function.
 
- Private            not inherited           not inherited        not inherited
- Protected          private                 Protected            Protected
- Public             private                 Protected            public
+
+
+6.Inheritance - when we create a drive class(child class) that have properties of base class(parent class).
+         syntex : 
+         class Base{
+            //body of Base class
+         };
+         class Drived : access_modifier Base{
+            //body of Drived class
+            void functin(var1) : void BaseFunction(var2, var3){   // calling the parent class method
+                this->var1 = var1;
+            }
+         };
+
+         ** Order of Execution - Base Class constructor then Drived class constructor. when we create the object of drived class //with programm
+
+
+         ** Important Acces Modifiers
+                            Drived Class            Drived Class         Drived Class
+         Base Class         private mdoe            Protected mode       public mode  
+
+         Private            not inherited           not inherited        not inherited
+         Protected          private                 Protected            Protected
+         Public             private                 Protected            public
+
+
+        Type of Inheritance
+        a. Single level Inheritance - base class to derived class
+        b. Multi-level Inheritance - one base class one derived class that drive class is the base class for other derived class
+        c. Multiple Inheritance - one or more base class has one derived class. Multiple class seperated by comma in syntex.
+        d. Hierarchial Inheritance - one base class has multiple derived class like binary tree.
+        e. Hybrid Inheritance - when we merge one and another type of inheritance together.
+
+
+
+7.Polymorphism - "Poly" means "many" and "morph" means "form". In simple word, polymorphism is the ability of the objectto take
+on different form or behave in different ways depending on the context in which they are used.
+
+        Type of polymorphism
+        a. Compile time polymorphism or Orverloading or Static Polymorphism
+            1.Function Overloading
+            2.Operator Overloading
+        
+        b.Run timer polymorphism ot Overriding or Dynamic Polymorphism
+            1. Function Overriding (Implemented using virtual function)
+
+
+
+8. Abstraction - hiding all unnecessary and showing  only the important part. Acces modifers /specifiers are use to implement abstraction.
+        we can implement abstraction using abstract class.
+        -Abstract class are used to provide a base class from which other classes can be derived.
+        -They cannot be instantiated and are ment to be inherited.
+        -Abstract class are typically used to define and interface for derived class.
+
+        syntext:
+        
+        abstrcat class ClassName{
+            //body
+        };
+
+
+
+9.Data Hiding - means to hide all unnecessary part. not showing it.
+
+
+10. Static Keyword
+        a. static variable 
+            -variable declared as static in a function are created and initilised once for lifetime of the program.
+            -This are shared by all the object of that class.
+
+            eg.
+                void Increment(){
+                    static int var=0;
+                    cout<< "Counter : "<< var;
+                    ++var;
+                }
+                int main(){
+                    for(int i = 0; i < 5; ++i){
+                        Increment();
+                    }
+                    return 0;
+                }
+        b.Static object - used in the class. eg in distructor using static example
+
+
+
+Extra topics Friend Functions and Friend class

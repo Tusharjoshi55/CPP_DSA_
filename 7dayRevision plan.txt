@@ -99,3 +99,17 @@ Thank you to everyone who followed along and supported this journey! What langua
 Tips for Best Engagement:
 1. Add Visuals: Attach a screenshot of your code snippet, HackerRank sub-score, or badge to each post (posts with visual proof get up to 3x higher engagement).
 2. Tag Tools: Tag @HackerRank in your posts—they often repost community learning achievements!
+
+
+
+
+
+
+
+
+
+
+
+final project 
+
+load balancer and youtube cli
